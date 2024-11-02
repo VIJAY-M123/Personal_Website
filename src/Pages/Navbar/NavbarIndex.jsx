@@ -11,16 +11,16 @@ import Experience from '../../Components/Experience'
 function NavbarIndex() {
   return (
   <>
-  <NavBar/>
-  
+ 
   <Routes>
-  <Route path="/" element={<Home/>}/> 
-   <Route path="/home" element={<Home/>}/>
+  <Route path="/" element={<NavBar/>}>
+   <Route index element={<Home/>}/>
    <Route path="/about" element={<About/>}/>
    <Route path="/image" element={<Image/>}/>
    <Route path="/experience" element={<Experience/>}/>
    <Route path="/project-experience" element={<WorkExperience/>}/>
    <Route path="/skills" element={<Technology/>}/>
+  </Route>
   </Routes>
   </>
     

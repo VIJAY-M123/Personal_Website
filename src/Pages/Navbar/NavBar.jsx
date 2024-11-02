@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import {FaCanadianMapleLeaf} from "react-icons/fa";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 //import NavbarLink from "./NavbarLink";
 import { Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,10 +17,11 @@ function NavBar() {
     localStorage.setItem('activeLink', pathname);
   }, [pathname]);
 
-  const defaultPath = pathname ? pathname : '/home';
+  const defaultPath = pathname ? pathname : '/';
 
   return (
-    <nav className='bg-gray-200 fixed w-full z-20'>
+    <>
+    <nav className='bg-gray-300 fixed w-full z-20'>
       <div className='flex items-center justify-around font-medium'>
         <div className='z-50 p-5 md:w-auto w-full flex justify-between'>
           <FaCanadianMapleLeaf className='md:cursor-pointer h-9' size={30} color='#ff0000'/>
@@ -31,27 +32,27 @@ function NavBar() {
         </div>
         <ul className='md:flex hidden uppercase items-center gap-2'>
           <li>
-            <Link to="/home" className={`py-7 px-3 inline-block hover:text-green-400 focus:text-[#FF0000] ${
-          defaultPath === '/home' ? 'text-[#FF0000]' : ''
+            <Link to="/" className={`py-7 px-3 inline-block hover:text-black hover:underline decoration-2 hover:duration-0  focus:text-[#000000] ${
+          defaultPath === '/' ? 'text-[#000000] underline decoration-2' : ''
         }`}>Home</Link>
-            <Link to="/skills" className={`py-7 px-3 inline-block hover:text-green-400 focus:text-[#FF0000]  ${
-          pathname === '/skills' ? 'text-[#FF0000]' : ''
+            <Link to="/skills" className={`py-7 px-3 inline-block hover:text-black hover:underline decoration-2 hover:duration-0 focus:text-[#000000]  ${
+          pathname === '/skills' ? 'text-[#000000] underline decoration-2' : ''
         }`}>Skills</Link>
-            <Link to="/experience" className={`py-7 px-3 inline-block hover:text-green-400 focus:text-[#FF0000]  ${
-          pathname === '/experience' ? 'text-[#FF0000]' : ''
+            <Link to="/experience" className={`py-7 px-3 inline-block hover:text-black hover:underline decoration-2 hover:duration-0 focus:text-[#000000]  ${
+          pathname === '/experience' ? 'text-[#000000] underline decoration-2' : ''
         }`}>Experience</Link>
-        <Link to="/project-experience" className={`py-7 px-3 inline-block hover:text-green-400 focus:text-[#FF0000]  ${
-          pathname === '/project-experience' ? 'text-[#FF0000]' : ''
+        <Link to="/project-experience" className={`py-7 px-3 inline-block hover:text-black hover:underline decoration-2 hover:duration-0 focus:text-[#000000]  ${
+          pathname === '/project-experience' ? 'text-[#000000] underline decoration-2' : ''
         }`}>Project Experience</Link>
-            <Link to="/image" className={`py-7 px-3 inline-block hover:text-green-400 focus:text-[#FF0000]
+            <Link to="/image" className={`py-7 px-3 inline-block hover:text-black hover:underline decoration-2 hover:duration-0 focus:text-[#000000]
              ${
-              pathname === '/image' ? 'text-[#FF0000]' : ''
+              pathname === '/image' ? 'text-[#000000] underline decoration-2' : ''
             }`}>Image</Link>
           </li>
           {/* <NavbarLink/> */}
           <li>
-            <Link to="/about" className={`py-7 px-3 inline-block hover:text-green-400 focus:text-[#FF0000]  ${
-          pathname === '/about' ? 'text-[#FF0000]' : ''
+            <Link to="/about" className={`py-7 px-3 inline-block hover:text-black hover:underline decoration-2 hover:duration-0 focus:text-[#000000]  ${
+          pathname === '/about' ? 'text-[#000000]' : ''
         }`}>Abouts</Link>
           </li>
         </ul>
@@ -62,8 +63,8 @@ function NavBar() {
         {/* // mobile view */}
         <ul className={`md:hidden fixed h-full w-full bg-gray-300 bottom-0 py-0 pl-4 duration-500 top-[76px] ${open ? "left-0":"left-[-100%]"}`}>
           <li className='flex flex-col'>
-            <Link to="/home" className={`py-3 px-3 inline-block hover:text-green-400 focus:text-[#FF0000] ${
-          defaultPath === '/home' ? 'text-[#FF0000]' : ''
+            <Link to="/" className={`py-3 px-3 inline-block hover:text-green-400 focus:text-[#FF0000] ${
+          defaultPath === '/' ? 'text-[#FF0000]' : ''
         }`} onClick={()=>setOpen(false)}>Home</Link>
             <Link to="/skills" className={`py-3 px-3 inline-block hover:text-green-400 active:text-red-400 focus:text-[#FF0000] ${
           pathname === '/skills' ? 'text-[#FF0000]' : ''
@@ -92,6 +93,8 @@ function NavBar() {
         {/* // mobile view */}
       </div>
     </nav>
+    <Outlet/>
+    </>
   )
 }
 

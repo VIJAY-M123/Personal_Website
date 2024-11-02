@@ -11,6 +11,7 @@ import TailwindCss from "../Image/Tailwind.png";
 import JavaScript from "../Image/JS.png";
 import MongoDb from "../Image/MongoDB.png";
 import NextJs from "../Image/Nextjs.png";
+import Analytics from "../Image/Analytics_bg.jpg"
 import MUI from "../Image/MUI.png";
 import Redux from "../Image/redux.png"
 import "../Style/Technology.css";
@@ -111,7 +112,11 @@ function Technology() {
         { width: 1200, itemsToShow: 4 },
     ];
   return (
-    <div className='h-2/3 w-full bg-gray-200 p-8 pt-24'>
+    <div className='h-2/3 w-full bg-gray-200 p-8 pt-24' style={{
+      backgroundImage: `url(${Analytics})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }}>
         <Typography variant='h5' fontWeight="bold" className='flex items-center justify-center font-bold' style={{ marginBottom: '25px' }}>Technology</Typography>
         <Carousel breakPoints={breakPoints}>
           {card.map((item, index)=>(
