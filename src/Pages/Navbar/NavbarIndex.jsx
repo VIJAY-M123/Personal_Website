@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router'
-import Home from '../Home'
-import NavBar from './NavBar'
-import About from '../About'
-import Image from '../Image'
-import WorkExperience from '../Work Experience'
-import Technology from '../Technology'
-import Experience from '../../Components/Experience'
+import Loading from '../../Components/Loading'
 
+const NavBar = lazy(()=>import('./NavBar'))
+const Home = lazy(()=>import('../Home'))
+const About = lazy(()=>import('../About'))
+const Image = lazy(()=>import('../Image'))
+const WorkExperience = lazy(()=>import('../Work Experience'))
+const Technology = lazy(()=>import('../Technology'))
+const Experience = lazy(()=>import('../../Components/Experience'))
 function NavbarIndex() {
   return (
   <>
- 
+ <Suspense fallback={<Loading/>}>
   <Routes>
   <Route path="/" element={<NavBar/>}>
    <Route index element={<Home/>}/>
@@ -22,6 +23,7 @@ function NavbarIndex() {
    <Route path="/skills" element={<Technology/>}/>
   </Route>
   </Routes>
+  </Suspense>
   </>
     
    
