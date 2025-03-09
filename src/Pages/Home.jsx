@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import AnimatedText from "../Components/AnimatedText";
 import Experience from '../Components/Experience';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import Resume from "../Assets/PDF/vijayaraj.pdf";
+import Resume from "../Assets/PDF/Vijayaraj_Resume.pdf";
 import Review from './Review';
 
 
