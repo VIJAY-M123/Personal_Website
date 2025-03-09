@@ -66,13 +66,13 @@ const Experience = () => {
                     work="Identified web-based user interactions and developed highly responsive user interface components via React concepts. Translated design and wireframes into high-quality code and wrote application interface code via JavaScripts following ReactJs workflows
 " />
 
-                    {/* <Details 
+                    <Details 
                     position="Junior Software Developer"
                     companyLink="https://www.bluebase.in/"
                     company="BlueBase Software Solution Pvt Ltd"
                     time="Feb 2021 - Jul 2021"
                     address="Chennai - 600032, Tamilnadu, India"
-                    work="Developed native Android applications and frameworks using Java. Defined and implemented robust app architectures and complex user interfaces" />            */}
+                    work="Developed native Android applications and frameworks using Java. Defined and implemented robust app architectures and complex user interfaces" />           
 
                     <Details 
                     position="Intern Software Developer"

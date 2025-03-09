@@ -39,7 +39,7 @@ function Home() {
           <Typography sx={{marginTop:"60px",fontWeight:"bold",fontSize:"30px"}}>Vijayaraj M</Typography>
           <Typography sx={{marginTop:"15px",fontWeight:"bold",fontSize:"18px"}}>Aggrandize venture Pvt Ltd</Typography>
           <Typography sx={{marginTop:"15px",fontWeight:"bold",fontSize:"15px"}}>Senior Software Developer</Typography>
-          <Typography sx={{marginTop:"15px",fontWeight:"bold",fontSize:"15px"}}>3+ Years Experience</Typography>
+          <Typography sx={{marginTop:"15px",fontWeight:"bold",fontSize:"15px"}}>4+ Years Experience</Typography>
         </Card>
        </Grid>
        <Grid item xs={12} lg={8} xl={9} component={motion.div}
